@@ -1,23 +1,26 @@
 import React from "react";
 import "./components.css";
 
-function Contact() {
+
+function Contact(props) {
   return (
     <div className="Contact">
       <img
         className="avatar"
-        src="https://randomuser.me/api/portraits/men/11.jpg"
-        alt="Peter Shelton"
+        src={props.avatar}
+        alt={props.name}
       />
-      <div className="ContactInfos">
-        <div className="name">Peter Shelton</div>
-        <div className="status">
-          <div className="status-online"> 
-          <div className="status-text">online</div>
-        </div>
-        </div>
+
+      
+      <div className="status">
+      <h4 className="name">{props.name}</h4>
+          <span className="status-online">
+          </span>
+          
+        <h5 className="status-text">Online</h5>
       </div>
     </div>
+    
   );
 }
 
